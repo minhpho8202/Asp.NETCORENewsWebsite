@@ -1,0 +1,12 @@
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\bin\Debug\net6.0\WebsiteTinTuc03.Common.deps.json
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\bin\Debug\net6.0\WebsiteTinTuc03.Common.dll
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\bin\Debug\net6.0\WebsiteTinTuc03.Common.pdb
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\obj\Debug\net6.0\WebsiteTinTuc03.Common.csproj.AssemblyReference.cache
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\obj\Debug\net6.0\WebsiteTinTuc03.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\obj\Debug\net6.0\WebsiteTinTuc03.Common.AssemblyInfoInputs.cache
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\obj\Debug\net6.0\WebsiteTinTuc03.Common.AssemblyInfo.cs
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\obj\Debug\net6.0\WebsiteTinTuc03.Common.csproj.CoreCompileInputs.cache
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\obj\Debug\net6.0\WebsiteTinTuc03.Common.dll
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\obj\Debug\net6.0\refint\WebsiteTinTuc03.Common.dll
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\obj\Debug\net6.0\WebsiteTinTuc03.Common.pdb
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Common\obj\Debug\net6.0\ref\WebsiteTinTuc03.Common.dll
