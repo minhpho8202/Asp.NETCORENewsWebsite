@@ -701,6 +701,10 @@
         }
       },
       "WebsiteTinTuc03.Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10"
+        },
         "runtime": {
           "WebsiteTinTuc03.Common.dll": {}
         }

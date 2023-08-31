@@ -15,3 +15,5 @@ C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.BLL\obj\Debug\net6.0\W
 C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.BLL\obj\Debug\net6.0\refint\WebsiteTinTuc03.BLL.dll
 C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.BLL\obj\Debug\net6.0\WebsiteTinTuc03.BLL.pdb
 C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.BLL\obj\Debug\net6.0\ref\WebsiteTinTuc03.BLL.dll
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.BLL\bin\Debug\net6.0\WebsiteTinTuc03.BLL.runtimeconfig.json
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.BLL\obj\Debug\net6.0\WebsiteTinTuc03.BLL.genruntimeconfig.cache

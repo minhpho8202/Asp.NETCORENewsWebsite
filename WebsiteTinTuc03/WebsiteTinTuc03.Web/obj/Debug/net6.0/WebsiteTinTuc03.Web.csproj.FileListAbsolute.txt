@@ -91,3 +91,8 @@ C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\obj\Debug\net6.0\r
 C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\obj\Debug\net6.0\WebsiteTinTuc03.Web.pdb
 C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\obj\Debug\net6.0\WebsiteTinTuc03.Web.genruntimeconfig.cache
 C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\obj\Debug\net6.0\ref\WebsiteTinTuc03.Web.dll
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\obj\Debug\net6.0\WebsiteTinTuc03.Web.MvcApplicationPartsAssemblyInfo.cs
