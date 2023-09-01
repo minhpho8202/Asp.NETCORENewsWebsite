@@ -21,6 +21,7 @@ const Header = () => {
                     <Navbar.Brand href="/">News</Navbar.Brand>
                     <Nav className="me-auto">
                         <Link className="nav-link" to="/">Home</Link>
+                        <Link className="nav-link" to="/login">Login</Link>
                         {/* <div className="d-flex align-items-center">
                             {
                                 user === null ? 
