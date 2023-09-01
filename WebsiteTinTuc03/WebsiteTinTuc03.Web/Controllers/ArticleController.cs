@@ -56,5 +56,21 @@ namespace WebsiteTinTuc03.Web.Controllers
             res = articleSvc.searchArticle(searchArticleReq);
             return Ok(res);
         }
+
+        [HttpGet("get-popular-articles")]
+        public IActionResult getPopularArticles()
+        {
+            var res = new SingleRsp();
+            res = articleSvc.getPopularArticles();
+            return Ok(res);
+        }
+
+        [HttpGet("get-latest-articles")]
+        public IActionResult getLatestArticles()
+        {
+            var res = new SingleRsp();
+            res = articleSvc.getLatestArticles();
+            return Ok(res);
+        }
     }
 }

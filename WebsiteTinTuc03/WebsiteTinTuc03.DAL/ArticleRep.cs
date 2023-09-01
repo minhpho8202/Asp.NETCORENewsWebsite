@@ -18,7 +18,11 @@ namespace WebsiteTinTuc03.DAL
         }
         public override Article Read(int id)
         {
-            var res = All.FirstOrDefault(u => u.Id == id);
+            //var res = All.FirstOrDefault(u => u.Id == id);
+            var res = All
+                .Where(u => u.Id == id)
+                .Include(u => u.Likes)
+                .Include(u => u.Comments).FirstOrDefault();
             return res;
         }
 
@@ -97,20 +101,69 @@ namespace WebsiteTinTuc03.DAL
             return res;
         }
 
-        public List<Article> searchArticle(string keyword)
+        public List<Article> getPoppularArticles()
         {
-            // Lấy danh sách bài viết dựa trên tiêu đề
             var articles = All
-                .Where(u => u.Title.Contains(keyword))
-                .Include(u => u.Likes)    // Liên kết thông tin về likes
-                .Include(u => u.Comments) // Liên kết thông tin về comments
+                .Include(u => u.Likes)
+                .Include(u => u.Comments)
+                .OrderByDescending(a => a.Likes.Count)
+                .ThenByDescending(a => a.Comments.Count)
+                .ToList();
+
+            return articles;
+        }
+
+        public List<Article> getLatestArticles()
+        {
+            var articles = All
+                .Include (u => u.Likes)
+                .Include(u => u.Comments)
+                .OrderByDescending(a => a.CreatedDate)
                 .ToList();
 
             return articles;
         }
 
 
+        public List<Article> searchArticle(string keyword)
+        {
+            var articles = All
+                .Where(u => u.Title.Contains(keyword))
+                .Include(u => u.Likes)
+                .Include(u => u.Comments)
+                .ToList();
 
+            return articles;
+        }
+
+        public int countArticles(DateTime? startDate = null, DateTime? endDate = null)
+        {
+            using (var context = new WebsiteTinTuc03Context())
+            {
+                try
+                {
+                    if (!startDate.HasValue)
+                    {
+                        startDate = DateTime.Now.Date;
+                    }
+
+                    if (!endDate.HasValue)
+                    {
+                        endDate = DateTime.Now.Date.AddMonths(1).AddDays(-1);
+                    }
+                    int count = context.Articles
+                        .Where(a => a.CreatedDate >= startDate && a.CreatedDate <= endDate)
+                        .Count();
+
+                    return count;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return -1;
+                }
+            }
+        }
 
     }
 }

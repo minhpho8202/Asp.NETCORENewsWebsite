@@ -89,5 +89,23 @@ namespace WebsiteTinTuc03.BLL
             res.Data = s;
             return res;
         }
+
+        public SingleRsp getPopularArticles()
+        {
+            var res = new SingleRsp();
+            res.Data = articleRep.getPoppularArticles();
+            return res;
+        }
+
+        public SingleRsp getLatestArticles()
+        {
+            var res = new SingleRsp();
+            res.Data = articleRep.getLatestArticles();
+            return res;
+        }
+        public int countArticles(DateTime? startDate = null, DateTime? endDate = null)
+        {
+            return articleRep.countArticles(startDate, endDate);
+        }
     }
 }

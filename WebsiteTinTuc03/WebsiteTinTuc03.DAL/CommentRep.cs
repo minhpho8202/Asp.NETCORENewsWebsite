@@ -68,5 +68,34 @@ namespace WebsiteTinTuc03.DAL
             }
             return res;
         }
+
+        public int countComments(DateTime? startDate = null, DateTime? endDate = null)
+        {
+            using (var context = new WebsiteTinTuc03Context())
+            {
+                try
+                {
+                    if (!startDate.HasValue)
+                    {
+                        startDate = DateTime.Now.Date;
+                    }
+
+                    if (!endDate.HasValue)
+                    {
+                        endDate = DateTime.Now.Date.AddMonths(1).AddDays(-1);
+                    }
+                    int count = context.Comments
+                        .Where(a => a.CreatedDate >= startDate && a.CreatedDate <= endDate)
+                        .Count();
+
+                    return count;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return -1;
+                }
+            }
+        }
     }
 }

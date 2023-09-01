@@ -96,3 +96,5 @@ C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\bin\Debug\net6.0\S
 C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\obj\Debug\net6.0\WebsiteTinTuc03.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\bin\Debug\net6.0\BCrypt.Net.dll
+C:\Asp.NETCORENewsWebsite\WebsiteTinTuc03\WebsiteTinTuc03.Web\bin\Debug\net6.0\Newtonsoft.Json.dll

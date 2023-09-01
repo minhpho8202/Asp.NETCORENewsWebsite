@@ -1,9 +1,16 @@
+using WebsiteTinTuc03.BLL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHttpClient<CountrySvc>(client =>
+{
+    client.BaseAddress = new Uri("https://restcountries.com/v3.1/");
+});
+
 
 var app = builder.Build();
 app.UseSwaggerUI();

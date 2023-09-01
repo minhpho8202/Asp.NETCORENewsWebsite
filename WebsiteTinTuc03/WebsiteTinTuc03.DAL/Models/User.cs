@@ -14,6 +14,8 @@ public partial class User
 
     public string? Role { get; set; }
 
+    public DateTime? CreatedDate { get; set; }
+
     [JsonIgnore]
     public virtual ICollection<Article> Articles { get; set; } = new List<Article>();
 

@@ -43,5 +43,10 @@ namespace WebsiteTinTuc03.BLL
 
             return existingRecord.Id;
         }
+
+        public int countComments(DateTime? startDate = null, DateTime? endDate = null)
+        {
+            return commentRep.countComments(startDate, endDate);
+        }
     }
 }

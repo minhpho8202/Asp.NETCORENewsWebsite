@@ -33,6 +33,7 @@ namespace WebsiteTinTuc03.BLL
             user.Id = userReq.Id;
             user.Username = userReq.Username;
             user.Password = userReq.Password;
+            user.CreatedDate = DateTime.Now;
             res = userRep.createUser(user);
             return res;
         }
@@ -95,5 +96,9 @@ namespace WebsiteTinTuc03.BLL
             return userRep.checkLogin(username, password);
         }
 
+        public int countUsers(DateTime? startDate = null, DateTime? endDate = null)
+        {
+            return userRep.countUsers(startDate, endDate);
+        }
     }
 }
