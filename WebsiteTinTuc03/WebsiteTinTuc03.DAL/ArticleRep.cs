@@ -22,7 +22,8 @@ namespace WebsiteTinTuc03.DAL
             var res = All
                 .Where(u => u.Id == id)
                 .Include(u => u.Likes)
-                .Include(u => u.Comments).FirstOrDefault();
+                .Include(u => u.Comments)
+                .Include(u => u.User).FirstOrDefault();
             return res;
         }
 
@@ -129,8 +130,6 @@ namespace WebsiteTinTuc03.DAL
         {
             var articles = All
                 .Where(u => u.Title.Contains(keyword))
-                .Include(u => u.Likes)
-                .Include(u => u.Comments)
                 .ToList();
 
             return articles;

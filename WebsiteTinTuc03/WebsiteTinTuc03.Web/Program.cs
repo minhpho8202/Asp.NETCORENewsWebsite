@@ -11,6 +11,18 @@ builder.Services.AddHttpClient<CountrySvc>(client =>
     client.BaseAddress = new Uri("https://restcountries.com/v3.1/");
 });
 
+var MyAllowSpecificOrigins = "_MyAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+        });
+});
+
 
 var app = builder.Build();
 app.UseSwaggerUI();
@@ -35,5 +47,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.Run();
