@@ -164,5 +164,27 @@ namespace WebsiteTinTuc03.DAL
             }
         }
 
+        public int countAllArticles()
+        {
+            var context = new WebsiteTinTuc03Context();
+
+
+                    int count = context.Articles
+                        .Count();
+
+                    return count;
+            
+        }
+
+        public List<Article> getArticlesByUserId(int userId)
+        {
+            var articles = All
+                .Where(a => a.UserId == userId)
+                .ToList();
+
+            return articles;
+        }
+
+
     }
 }

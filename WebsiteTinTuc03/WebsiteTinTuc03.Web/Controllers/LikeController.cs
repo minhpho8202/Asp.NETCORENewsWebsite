@@ -31,5 +31,13 @@ namespace WebsiteTinTuc03.Web.Controllers
             res = likeSvc.Remove(articleId, userId);
             return Ok(res);
         }
+
+        [HttpGet("isLiked")]
+        public IActionResult isLike(int articleId, int userId)
+        {
+            Boolean isLike;
+            isLike = likeSvc.isLiked(articleId, userId);
+            return Ok(isLike);
+        }
     }
 }

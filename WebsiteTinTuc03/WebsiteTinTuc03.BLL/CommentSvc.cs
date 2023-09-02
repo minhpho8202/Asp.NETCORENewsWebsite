@@ -30,18 +30,31 @@ namespace WebsiteTinTuc03.BLL
             res = commentRep.createComment(comment);
             return res;
         }
-        public int Remove(int articleId, int userId)
+
+        public SingleRsp updateComment(CommentReq commentReq)
         {
-            var existingRecord = All.FirstOrDefault(comment => comment.ArticleId == articleId && comment.UserId == userId);
+            var res = new SingleRsp();
 
-            if (existingRecord == null)
+            Comment existingComment = _rep.Read(commentReq.Id);
+
+            if (existingComment == null)
             {
-                return -1;
+                res.SetError("Comment not found");
+                return res;
             }
+            existingComment.Content = commentReq.Content;
 
-            commentRep.Remove(articleId, userId);
+            res = _rep.updateComment(existingComment);
 
-            return existingRecord.Id;
+            return res;
+        }
+
+        public int Remove(int id) 
+        {
+
+            commentRep.Remove(id);
+
+            return id;
         }
 
         public int countComments(DateTime? startDate = null, DateTime? endDate = null)

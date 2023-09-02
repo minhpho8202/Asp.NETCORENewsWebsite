@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,16 @@ namespace WebsiteTinTuc03.DAL
 
         }
 
-        public int Remove(int articleId, int userId)
+        public override Comment Read(int id)
         {
-            var existingRecord = All.FirstOrDefault(comment => comment.ArticleId == articleId && comment.UserId == userId);
+            var res = All
+                .Where(u => u.Id == id).FirstOrDefault();
+            return res;
+        }
+
+        public int Remove(int id)
+        {
+            var existingRecord = All.FirstOrDefault(comment => comment.Id == id);
 
             if (existingRecord == null)
             {
@@ -56,6 +64,29 @@ namespace WebsiteTinTuc03.DAL
                     try
                     {
                         var u = context.Comments.Add(comment);
+                        context.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                    }
+                }
+            }
+            return res;
+        }
+
+        public SingleRsp updateComment(Comment comment)
+        {
+            var res = new SingleRsp();
+            using (var context = new WebsiteTinTuc03Context())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var u = context.Comments.Update(comment);
                         context.SaveChanges();
                         tran.Commit();
                     }

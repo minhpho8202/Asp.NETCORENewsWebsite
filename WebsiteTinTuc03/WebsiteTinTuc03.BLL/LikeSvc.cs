@@ -42,5 +42,10 @@ namespace WebsiteTinTuc03.BLL
 
             return existingRecord.Id;
         }
+
+        public bool isLiked(int articleId, int userId)
+        {
+            return likeRep.isLiked(articleId, userId);
+        }
     }
 }

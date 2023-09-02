@@ -72,5 +72,20 @@ namespace WebsiteTinTuc03.Web.Controllers
             res = articleSvc.getLatestArticles();
             return Ok(res);
         }
+
+        [HttpGet("get-article-by-userId")]
+        public IActionResult getArticleByUserId(int userId)
+        {
+            var res = new SingleRsp();
+            res = articleSvc.getArticlesByUserId(userId);
+            return Ok(res);
+        }
+
+        [HttpGet("count-all-article")]
+        public IActionResult countAllArticles()
+        {
+            int count = articleSvc.countAllArticles();
+            return Ok(count);
+        }
     }
 }

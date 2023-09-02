@@ -70,5 +70,18 @@ namespace WebsiteTinTuc03.DAL
             }
             return res;
         }
+
+        public bool isLiked(int articleId, int userId)
+        {
+            var context = new WebsiteTinTuc03Context();
+            var existingRecord = context.Likes.FirstOrDefault(like => like.ArticleId == articleId && like.UserId == userId);
+            if(existingRecord != null)
+            {
+                return true;
+            }
+            return false;
+            
+        }
+
     }
 }

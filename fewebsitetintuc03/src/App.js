@@ -8,6 +8,11 @@ import Login from "./components/Login";
 import { createContext, useReducer } from "react";
 import cookie from "react-cookies";
 import MyUserReducer from "./reducers/MyUserReducer";
+import Register from "./components/Register";
+import AddArticle from "./components/AddArticle";
+import PostedArticle from "./components/PostedArticle";
+import Country from "./components/Country";
+import Stats from "./components/Stats";
 
 export const MyUserContext = createContext();
 
@@ -25,8 +30,15 @@ const App = () => {
       <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="articles/:id" element={<DetailArticle />} />
+        <Route path="/articles/:id" element={<DetailArticle />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/update-user/:id" element={<Register />} />
+        <Route path="/add-article" element={<AddArticle />} />
+        <Route path="/update-article/:id" element={<AddArticle />} />
+        <Route path="/posted-article" element={<PostedArticle />} />
+        <Route path="/country" element={<Country />} />
+        <Route path="/stats" element={<Stats />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

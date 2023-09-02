@@ -24,11 +24,19 @@ namespace WebsiteTinTuc03.Web.Controllers
             return Ok(res);
         }
 
-        [HttpDelete("comment")]
-        public IActionResult deleteComment(int articleId, int userId)
+        [HttpPost("update-comment")]
+        public IActionResult updateComment([FromBody] CommentReq commentReq)
+        {
+            var res = new SingleRsp();
+            res = commentSvc.updateComment(commentReq);
+            return Ok(res);
+        }
+
+        [HttpDelete("comment/{commentId}")]
+        public IActionResult deleteComment(int commentId)
         {
             int res;
-            res = commentSvc.Remove(articleId, userId);
+            res = commentSvc.Remove(commentId);
             return Ok(res);
         }
     }

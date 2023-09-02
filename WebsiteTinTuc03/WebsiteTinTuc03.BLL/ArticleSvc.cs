@@ -107,5 +107,17 @@ namespace WebsiteTinTuc03.BLL
         {
             return articleRep.countArticles(startDate, endDate);
         }
+
+        public int countAllArticles()
+        {
+            return articleRep.countAllArticles();
+        }
+
+        public SingleRsp getArticlesByUserId(int userId)
+        {
+            var res = new SingleRsp();
+            res.Data = articleRep.getArticlesByUserId(userId);
+            return res;
+        }
     }
 }
